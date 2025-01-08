@@ -1,0 +1,54 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "tittle": "Guitar Fundamentals",
+      "slug": "guitar-fundamentals",
+      "description": "Learn the basics of playing guitar with our comprehensive beginner's course.",
+      "price": 99.99,
+      "instructor": "John Doe",
+      "isFeatured": true,
+      "img": "/courses/guitar.jpeg"
+    },
+    {
+      "id": 2,
+      "tittle": "flute Fundamentals",
+      "slug": "guitar-fundamentals",
+      "description": "Learn the basics of playing flute with our comprehensive beginner's course.",
+      "price": 99.99,
+      "instructor": "John Doe",
+      "isFeatured": true,
+      "img": "/courses/flute.webp"
+    },
+    {
+      "id": 3,
+      "tittle": "piano Fundamentals",
+      "slug": "guitar-fundamentals",
+      "description": "Learn the basics of playing piano with our comprehensive beginner's course.",
+      "price": 99.99,
+      "instructor": "John Doe",
+      "isFeatured": true,
+      "img": "/courses/piano.webp"
+    },
+    {
+      "id": 4,
+      "tittle": "flute Fundamentals",
+      "slug": "guitar-fundamentals",
+      "description": "Learn the basics of playing flute with our comprehensive beginner's course.",
+      "price": 99.99,
+      "instructor": "John Doe",
+      "isFeatured": true,
+      "img": "/courses/flute.webp"
+    },
+    {
+      "id": 5,
+      "tittle": "Guitar Fundamentals",
+      "slug": "guitar-fundamentals",
+      "description": "Learn the basics of playing guitar with our comprehensive beginner's course.",
+      "price": 99.99,
+      "instructor": "John Doe",
+      "isFeatured": true,
+      "img": "/courses/guitar.jpeg"
+    }
+  ]
+}

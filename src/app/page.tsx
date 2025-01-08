@@ -1,7 +1,21 @@
+import FeaturedCourses from "@/components/FeaturedCourses";
+import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import Instructor from "@/components/Instructor";
+import TestimonialCards from "@/components/TestimonialCards";
+import UpComingWebinar from "@/components/UpComingWebinar";
+import WhyChooseUs from "@/components/WhyChooseUs";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1>harish joshi</h1>
-    </div>
+    <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
+      <HeroSection />
+      <FeaturedCourses />
+      <WhyChooseUs />
+      <TestimonialCards />
+      <UpComingWebinar />
+      <Instructor />
+      <Footer />
+    </main>
   );
 }
