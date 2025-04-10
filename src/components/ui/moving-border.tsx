@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React from "react";
 import {
@@ -72,8 +73,7 @@ export function Button({
 export const MovingBorder = ({
   children,
   duration = 2000,
-  rx,
-  ry,
+
   ...otherProps
 }: {
   children: React.ReactNode;
@@ -82,11 +82,11 @@ export const MovingBorder = ({
   ry?: string;
   [key: string]: any;
 }) => {
-  const pathRef = useRef<any>();
+  const pathRef = useRef<SVGPathElement | null>(null);
   const progress = useMotionValue<number>(0);
 
   useAnimationFrame((time) => {
-    const length = pathRef.current?.getTotalLength();
+    const length = pathRef.current?.getTotalLength?.();
     if (length) {
       const pxPerMillisecond = length / duration;
       progress.set((time * pxPerMillisecond) % length);
@@ -114,13 +114,11 @@ export const MovingBorder = ({
         height="100%"
         {...otherProps}
       >
-        <rect
-          fill="none"
-          width="100%"
-          height="100%"
-          rx={rx}
-          ry={ry}
+        <path
           ref={pathRef}
+          fill="none"
+          d="M 10 10 H 190 V 90 H 10 Z"
+          stroke="transparent"
         />
       </svg>
       <motion.div

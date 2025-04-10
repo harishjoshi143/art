@@ -5,7 +5,7 @@ import Link from "next/link";
 import { BackgroundGradient } from "./ui/background-gradient";
 
 function FeaturedCourses() {
-  let featuredCourses = courseData.courses;
+  const featuredCourses = courseData.courses;
   return (
     <div className="py-12 bg-gray-900">
       <div>

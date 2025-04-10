@@ -4,22 +4,22 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
+interface ContentItem {
+  title: string;
+  description: string;
+  content?: React.ReactNode;
+}
+
 export const StickyScroll = ({
   content,
   contentClassName,
 }: {
-  content: {
-    title: string;
-    description: string;
-    content?: React.ReactNode | any;
-  }[];
+  content: ContentItem[];
   contentClassName?: string;
 }) => {
-  const [activeCard, setActiveCard] = React.useState(0);
-  const ref = useRef<any>(null);
+  const [activeCard, setActiveCard] = useState(0);
+  const ref = useRef<HTMLDivElement>(null); // Fixed: Removed 'any' type
   const { scrollYProgress } = useScroll({
-    // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-    // target: ref
     container: ref,
     offset: ["start start", "end start"],
   });
@@ -57,7 +57,7 @@ export const StickyScroll = ({
 
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
+  }, [activeCard])
 
   return (
     <motion.div
